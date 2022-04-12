@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Diseño Desktop */
+
+@media screen and (min-width:321px) {
+
+    #grilla {
+        display: grid;
+        grid-template-areas: 
+        "logo navDer navDer"
+        "foto foto foto"
+        "imagen parrafo parrafo"
+        "servicios servicios servicios"
+        "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr 2fr 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        margin: 0px;
+        height: 100vh;
+    }
+
+    footer {
+        grid-area: footer;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        background-color: beige;
+    }
+
+    section#foto-portada {
+        grid-area: foto;
+    }
+
+
+    section#servicios {
+    grid-area: servicios; 
+    }
+
+
+    /* header */
+
+    #logo {
+        display: grid;
+        grid-area: logo;
+        padding-left: 10px;
+    }
+
+    #logo :hover {
+        color: blueviolet;
+        transition: .3s ease;
+    }
+
+    #navDer {
+        display: grid;
+        justify-items: end;
+        align-items: center;
+        grid-area: navDer;
+        font-weight: bold;
+    }
+
+    .menu-header {
+        list-style: none;
+        padding-right: 10px;
+    }
+
+    .menu-header li {
+        display: inline-block;
+    }
+
+    .menu-header li a {
+        text-decoration: none;
+    }
+
+    .menu-header li :hover {
+        color: blueviolet;
+        border-bottom: 1px solid;
+        transition: .3s ease;
+    }
+
+
+
+
+
+    /* Foto portada */
+
+    #foto-portada {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    .portada {
+        justify-self: stretch;
+        align-self: center;
+        padding: 0;
+        height: 500px;
+    }
+
+
+    .btn {
+        position: absolute;
+        text-align: center;
+        top: 45%;
+        left: 45%;
+    }
+    
+    .btn_text {
+        background-color: beige;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 16px 32px;
+        border-radius: 10px;
+    }
+    
+    .btn :hover {
+        opacity: .8;
+        transition: .3s ease;
+    }
+    
+
+
+    /* Main */
+
+    #parrafo {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-area: parrafo;
+    }
+
+    .boton {
+        list-style: none;
+        text-decoration: none;
+        background-color: beige;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    .boton :hover {
+        opacity: .5;
+        transition: .3s ease;
+    }
+
+    #imagen {
+        display: grid;
+        justify-items: center;
+        grid-area: imagen;
+    }
+
+    .imagen-parrafo {
+        width: 100%;
+    }
+
+    /*galleria*/
+
+
+    #servicios {
+        width: 100%;
+    }
+
+    .padre2 {
+        display: grid;
+        height: 200;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
+
+    .hijo2 {
+        padding: 1px;
+    }
+
+
+    /* footer */
+
+    .links {
+        text-decoration: none;
+        list-style: none;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: center;
+        grid-column-gap: 20px;
+        padding-top: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .footer {
+        text-align: center;
+        background-color: beige;
+        padding: 10px;
+    }
+}
+
+
+
+
+/* Diseño Mobile */
+
+@media screen and (max-width:320px) {
+    #grilla {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "logo logo"
+        "navDer navDer"
+        "foto foto"
+        "parrafo parrafo"
+        "imagen imagen"
+        "servicios servicios"
+        "footer footer";
+    }
+
+    footer {
+        grid-area: footer;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        background-color: beige;
+    }
+
+    section#foto-portada {
+        grid-area: foto;
+    }
+
+
+    section#servicios {
+    grid-area: servicios; 
+    }
+
+
+    /* header */
+
+    #logo {
+        display: grid;
+        grid-area: logo;
+        text-align: center;
+    }
+
+    #navDer {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-area: navDer;
+    }
+
+    .menu-header {
+        list-style: none;
+    }
+
+    .menu-header li {
+        display: inline-block;
+    }
+
+    .menu-header li a {
+        text-decoration: none;
+    }
+
+    .menu-header li :hover {
+        color: blueviolet;
+        border-bottom: 1px solid;
+        transition: .3s ease;
+    }
+
+
+
+
+
+    /* Foto portada */
+
+    #foto-portada {
+        display: grid;
+        width: 96%;
+    }
+
+    .portada {
+        justify-self: stretch;
+        align-self: center;
+        padding: 5px;
+        height: 300px;
+        width: 100%;
+    }
+
+
+    .btn {
+        position: absolute;
+        text-align: center;
+        padding: 5px;
+        top: 40%;
+        left: 20%;
+    }
+    
+    .btn_text {
+        background-color: beige;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 16px 32px;
+        border-radius: 10px;
+    }
+    
+    .btn :hover {
+        opacity: .8;
+        transition: .3s ease;
+    }
+
+    /* Main */
+
+    #parrafo {
+        display: grid;
+        justify-items: center;
+        grid-area: parrafo;
+        padding: 10px;
+    }
+
+    #imagen {
+        display: grid;
+        justify-items: center;
+        grid-area: imagen;
+    }
+
+    .imagen-parrafo {
+        width: 95%;
+        padding: 1px;
+    }
+
+    /*galleria*/
+
+    .padre2 {
+        display: grid;
+        width: 100%;
+        height: 200;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
+
+    .hijo2 {
+        padding: 1px;
+    }
+
+
+    /* footer */
+
+    .links {
+        text-decoration: none;
+        list-style: none;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: center;
+        grid-column-gap: 20px;
+        padding-top: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .footer {
+        text-align: center;
+        background-color: beige;
+        padding: 10px;
+    }
+
+}
+
+
+/* Diseño Tablet */
+
+@media screen and (max-width:650px) {
+    #grilla {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "logo logo"
+        "navDer navDer"
+        "foto foto"
+        "parrafo parrafo"
+        "imagen imagen"
+        "servicios servicios"
+        "footer footer";
+    }
+
+    footer {
+        grid-area: footer;
+        width: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        background-color: beige;
+    }
+
+    section#foto-portada {
+        grid-area: foto;
+    }
+
+
+    section#servicios {
+    grid-area: servicios; 
+    }
+
+
+    /* header */
+
+    #logo {
+        display: grid;
+        grid-area: logo;
+        text-align: center;
+    }
+
+    #navDer {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-area: navDer;
+    }
+
+    .menu-header {
+        list-style: none;
+    }
+
+    .menu-header li {
+        display: inline-block;
+    }
+
+    .menu-header li a {
+        text-decoration: none;
+    }
+
+    .menu-header li :hover {
+        color: blueviolet;
+        border-bottom: 1px solid;
+        transition: .3s ease;
+    }
+
+
+
+
+
+    /* Foto portada */
+
+    #foto-portada {
+        display: grid;
+        width: 96%;
+    }
+
+    .portada {
+        justify-self: stretch;
+        align-self: center;
+        padding: 5px;
+        height: 300px;
+        width: 100%;
+    }
+
+    .btn {
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        left: 35%;
+    }
+    
+    .btn_text {
+        background-color: beige;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 16px 32px;
+        border-radius: 10px;
+    }
+    
+    .btn :hover {
+        opacity: .8;
+        transition: .3s ease;
+    }
+
+
+    /* Main */
+
+    #parrafo {
+        display: grid;
+        justify-items: center;
+        grid-area: parrafo;
+        padding: 10px;
+    }
+
+    #imagen {
+        display: grid;
+        justify-items: center;
+        grid-area: imagen;
+    }
+
+    .imagen-parrafo {
+        width: 95%;
+        padding: 1px;
+    }
+
+    /*galleria*/
+
+    #servicios {
+        width: 98%;
+    }
+
+    .padre2 {
+        display: grid;
+        width: 100%;
+        height: 200;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
+
+    .hijo2 {
+        padding: 1px;
+    }
+
+
+    /* footer */
+
+    .links {
+        text-decoration: none;
+        list-style: none;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: center;
+        grid-column-gap: 20px;
+        padding-top: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .footer {
+        text-align: center;
+        background-color: beige;
+        padding: 10px;
+    }
+
+}
+
+
+/* Sobre-Nosotros */
+
+/* @media screen and (min-width:321px) {
+
+    #grilla {
+        display: grid;
+        grid-template-areas: 
+        "logo logo navDer navDer"
+        "fotoVertical fotoVertical parrafo parrafo"
+        "footer footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        margin: 0px;
+        height: 100vh;
+    }
+
+    #fotoVertical {
+        display: grid;
+        grid-area: fotoVertical;
+    }
+    .pic {
+        width: 100%;
+    }
+
+    #parrafo {
+        display: grid;
+        justify-items: center;
+        grid-area: parrafo;
+        padding: 10px;
+    }
+
+} */
